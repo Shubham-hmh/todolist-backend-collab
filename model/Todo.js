@@ -9,7 +9,8 @@ const TodoSchema = new mongoose.Schema({
     createdAt:{
         type:Date,
         default:Date.now
-    }
+    },
+    priority: { type: String, enum: ['High', 'Medium', 'Low'], default: 'Medium' },
 }, { timestamps: true }
 )
 
